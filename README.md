@@ -2,6 +2,7 @@
 .
 ├── main.tf
 ├── modules
+
 │   ├── resource_group
 │   │   └── main.tf
 │   ├── virtual_network
