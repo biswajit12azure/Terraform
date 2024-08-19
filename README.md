@@ -1,4 +1,6 @@
 # Terraform
+
+This repository contains the code for below azure resources using module structure.
 .
 
 ├── main.tf
