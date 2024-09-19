@@ -1,10 +1,11 @@
 provider "azurerm" {
   features {}
+  subscription_id = "d87b0440-7342-4f1b-aa3a-83f0e1745c41"
 }
 
 module "resource_group" {
   source  = "./modules/resource_group"
-  name    = "chetu-resource-group"
+  name    = "kyndryl-resource-group"
   location = "East US"
 }
 

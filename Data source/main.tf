@@ -13,7 +13,7 @@ provider "azurerm" {
 
 # Data source to reference the existing resource group
 data "azurerm_resource_group" "existing_rg" {
-  name = "example-resources"
+  name = "rg1"
 }
 
 # Create an App Service Plan in the existing resource group

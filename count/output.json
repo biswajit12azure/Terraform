@@ -1,0 +1,24 @@
+{
+  "service_plan_names": {
+    "sensitive": false,
+    "type": [
+      "tuple",
+      [
+        "string",
+        "string",
+        "string",
+        "string",
+        "string",
+        "string"
+      ]
+    ],
+    "value": [
+      "app-service-plan-0",
+      "app-service-plan-1",
+      "app-service-plan-2",
+      "app-service-plan-3",
+      "app-service-plan-4",
+      "app-service-plan-5"
+    ]
+  }
+}

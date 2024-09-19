@@ -24,5 +24,5 @@ variable "storage_account_config" {
 
 variable "environment" {
   type    = string
-  default = "dev"  # Change this to "prod" for production configuration
+  default = "prod"  # Change this to "prod" for production configuration
 }

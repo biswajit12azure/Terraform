@@ -6,7 +6,7 @@ variable "storage_resource_group_name" {
 variable "storage_location" {
   description = "The Azure region to create the storage account in"
   type        = string
-  default     = "East US"
+  default     = "West US"
 }
 
 variable "storage_account_name" {

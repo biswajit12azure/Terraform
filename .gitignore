@@ -1,0 +1,9 @@
+*.tfstate
+*.tfstate.*
+
+# Ignore Terraform provider plugin directory
+.terraform/*.tfstate
+*.tfstate.*
+
+# Ignore Terraform provider plugin directory
+.terraform/

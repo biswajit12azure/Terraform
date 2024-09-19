@@ -6,6 +6,6 @@ resource "azurerm_virtual_network" "this" {
 
   subnet {
     name           = var.subnet_name
-    address_prefix = var.subnet_address_prefix
+    address_prefixes = tolist([var.subnet_address_prefix])
   }
 }

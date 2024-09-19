@@ -1,5 +1,6 @@
 provider "azurerm" {
   features {}
+  subscription_id = "d87b0440-7342-4f1b-aa3a-83f0e1745c41"
 }
 
 variable "environment" {
@@ -9,6 +10,7 @@ variable "environment" {
 
 variable "resource_group_name" {
   description = "The name of the resource group"
+  type        = string
   default     = "example-rg"
 }
 
@@ -17,6 +19,10 @@ variable "location" {
   default     = "East US"
 }
 
+resource "azurerm_resource_group" "example" {
+  name     = var.resource_group_name
+  location = var.location
+}
 # Conditional VNet based on environment
 resource "azurerm_virtual_network" "example_vnet" {
   name                = "exampleVNet"
@@ -36,7 +42,7 @@ resource "azurerm_subnet" "example_subnet" {
   virtual_network_name = azurerm_virtual_network.example_vnet.name
   
   # Smaller subnet for dev, larger for prod
-  address_prefixes     = var.environment == "prod" ? ["10.0.1.0/24"] : ["10.0.1.0/26"]
+  address_prefixes     = var.environment == "prod" ? ["10.0.1.0/24"] : ["10.0.0.0/25"]
 }
 
 output "vnet_address_space" {
